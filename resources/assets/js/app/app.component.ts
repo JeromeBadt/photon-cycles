@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
     selector: 'app-root',
     template: `<h1>{{ title }}</h1>`,
 })
-export class ExampleComponent {
+export class AppComponent {
     title = 'app works!';
 }

@@ -1,4 +1,5 @@
 <!doctype html>
+<!--suppress HtmlUnknownTarget -->
 <html lang="{{ app()->getLocale() }}">
     <head>
         <title>Photon Cycles</title>
@@ -23,7 +24,8 @@
     </head>
     <body>
         <app-root></app-root>
-        <script src="{{ mix('build/js/polyfills.js') }}"></script>
-        <script src="{{ mix('build/js/main.js') }}"></script>
+
+        <script src="build/polyfills.js"></script>
+        <script src="build/main.js"></script>
     </body>
 </html>

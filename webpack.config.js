@@ -1,4 +1,5 @@
 const AngularCompilerPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const helpers = require('./webpack-config/helpers');
 
@@ -68,7 +69,17 @@ module.exports = function (env, argv) {
                 tsConfigPath: 'tsconfig.json',
                 mainPath: entry.main,
                 sourceMap: true
-            })
+            }),
+
+            /**
+             * Copies project static assets.
+             */
+            new CopyWebpackPlugin(
+                [
+                    {from: 'resources/assets/styles/semantic/dist'}
+                ],
+                {}
+            ),
         ]
     };
 };

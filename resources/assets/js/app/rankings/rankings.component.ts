@@ -18,7 +18,7 @@ export class Rank {
 export class RankingsComponent {
     rankings: Rank[];
 
-    constructor () {
+    constructor() {
         this.rankings = [
             new Rank(1014, 'Alfred'),
             new Rank(1013, 'Fred'),

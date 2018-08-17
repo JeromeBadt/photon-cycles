@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { PlayComponent } from './play.component';
+import { HelpComponent } from './help.component';
 import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations: [
-        PlayComponent
+        HelpComponent
     ],
     imports: [RouterModule],
     exports: [
-        PlayComponent
+        HelpComponent
     ]
 })
-export class PlayModule {
+export class HelpModule {
 }

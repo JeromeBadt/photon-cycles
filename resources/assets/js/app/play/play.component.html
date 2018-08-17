@@ -1,8 +1,19 @@
-<div class="webgl-content">
-  <div id="gameContainer" style="width: 960px; height: 600px"></div>
-  <div class="footer">
-    <div class="webgl-logo"></div>
-    <div class="fullscreen" (click)="gameInstance.SetFullscreen(1)"></div>
-    <div class="title">Photon Cycles</div>
+<div>
+  <div class="webgl-content">
+    <div id="gameContainer" style="width: 960px; height: 600px"></div>
+    <div class="footer">
+      <div class="webgl-logo"></div>
+      <div class="fullscreen" (click)="gameInstance.SetFullscreen(1)"></div>
+      <div class="title">Photon Cycles</div>
+      <div align="center">
+        <button
+            style="width: 20%"
+            class="ui teal big button"
+            [routerLink]="['/menu']"
+        >
+          Back
+        </button>
+      </div>
+    </div>
   </div>
 </div>

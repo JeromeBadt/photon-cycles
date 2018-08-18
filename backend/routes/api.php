@@ -12,9 +12,7 @@
 */
 
 
-Route::group([
-    'middleware' => 'api'
-], function () {
+Route::group([], function () {
     Route::post('login', 'Auth\\AuthController@login');
     Route::post('signup', 'Auth\\AuthController@signup');
     Route::post('logout', 'Auth\\AuthController@logout');

@@ -24,11 +24,11 @@ export class TokenService {
         localStorage.setItem('token', token);
     }
 
-    remove() {
+    remove(): void {
         localStorage.removeItem('token');
     }
 
-    isValid() {
+    isValid(): boolean {
         const token = this.get();
 
         if (token) {
@@ -51,7 +51,7 @@ export class TokenService {
         return JSON.parse(atob(payload));
     }
 
-    loggedIn() {
+    loggedIn(): boolean {
         return this.isValid();
     }
 }

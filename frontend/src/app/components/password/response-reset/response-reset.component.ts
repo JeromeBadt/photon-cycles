@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JarwisService } from '../../../services/jarwis.service';
 import { SnotifyService } from 'ng-snotify';
@@ -6,9 +6,9 @@ import { SnotifyService } from 'ng-snotify';
 @Component({
     selector: 'app-response-reset',
     templateUrl: './response-reset.component.html',
-    styleUrls: ['./response-reset.component.css']
+    styleUrls: ['./response-reset.component.scss']
 })
-export class ResponseResetComponent implements OnInit {
+export class ResponseResetComponent {
     public error = [];
     public form = {
         password: null,
@@ -32,9 +32,6 @@ export class ResponseResetComponent implements OnInit {
             data => this.handleResponse(data),
             error => this.handleError(error)
         );
-    }
-
-    ngOnInit() {
     }
 
     private handleResponse(data) {

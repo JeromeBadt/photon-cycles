@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { JarwisService } from '../../../services/jarwis.service';
 import { SnotifyService } from 'ng-snotify';
 
 @Component({
     selector: 'app-request-reset',
     templateUrl: './request-reset.component.html',
-    styleUrls: ['./request-reset.component.css']
+    styleUrls: ['./request-reset.component.scss']
 })
-export class RequestResetComponent implements OnInit {
+export class RequestResetComponent {
     public form = {
         email: null
     };
@@ -33,8 +33,5 @@ export class RequestResetComponent implements OnInit {
         this.Notify.clear();
         this.Notify.success(data.data);
         this.form.email = null;
-    }
-
-    ngOnInit() {
     }
 }

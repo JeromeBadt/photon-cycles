@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { JarwisService } from '../../services/jarwis.service';
 import { TokenService } from '../../services/token.service';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-signup',
     templateUrl: './signup.component.html',
-    styleUrls: ['./signup.component.css']
+    styleUrls: ['./signup.component.scss']
 })
-export class SignupComponent implements OnInit {
-
+export class SignupComponent {
     public form = {
         email: null,
         name: null,
@@ -35,14 +34,10 @@ export class SignupComponent implements OnInit {
 
     handleResponse(data) {
         this.Token.handle(data.access_token);
-        this.router.navigateByUrl('/profile');
+        this.router.navigateByUrl('/');
     }
 
     handleError(error) {
         this.error = error.error.errors;
     }
-
-    ngOnInit() {
-    }
-
 }

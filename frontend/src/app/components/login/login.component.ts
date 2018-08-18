@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { JarwisService } from '../../services/jarwis.service';
 import { TokenService } from '../../services/token.service';
-import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css']
+    styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
     public form = {
         email: null,
         password: null
@@ -35,13 +35,10 @@ export class LoginComponent implements OnInit {
     handleResponse(data) {
         this.Token.handle(data.access_token);
         this.Auth.changeAuthStatus(true);
-        this.router.navigateByUrl('/profile');
+        this.router.navigateByUrl('/');
     }
 
     handleError(error) {
         this.error = error.error.error;
-    }
-
-    ngOnInit() {
     }
 }
